@@ -27,7 +27,7 @@ namespace QueensLibrary
 
         public override string ToString()
         {
-            return ('A'+File).ToString() + Rank;
+            return ((char)('A'+File)).ToString() + Rank;
         }
     }
 }
