@@ -10,6 +10,7 @@ namespace QueensLibrary
     {
         string Name { get; }
         IEnumerable<ISolution> GetSolutions(int size);
+        int GetSolutionCount(int size);
     }
 
     public interface ISolution
@@ -19,12 +20,14 @@ namespace QueensLibrary
 
     public abstract class Queen
     {
-        public abstract int Rank { get; }
-        public abstract char File { get; }
+        public abstract byte Rank { get; }
+        
+        //0 = A, 1 = B, etc
+        public abstract byte File { get; }
 
         public override string ToString()
         {
-            return File.ToString() + Rank;
+            return ('A'+File).ToString() + Rank;
         }
     }
 }

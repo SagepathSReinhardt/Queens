@@ -41,9 +41,9 @@ namespace Queens
             }
 
             Console.WriteLine("Done");
-//#if DEBUG
+#if DEBUG
             Console.ReadKey();
-//#endif
+#endif
         }
     }
 }
