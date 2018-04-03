@@ -7,7 +7,7 @@ using QueensLibrary;
 
 namespace Queens
 {
-    public interface ITestConfig<T1,T2> where T1 : class where T2 : class
+    public interface ITestConfig<T1,T2> where T1 : class //where T2 : class
     {
         Type Type { get; }
 
@@ -21,7 +21,7 @@ namespace Queens
 
         Func<T2,string> GetResults { get; }
 
-        Func<Test<IQueensSolver, IEnumerable<ISolution>>, double> GetRanking { get; }
+        Func<Test<T1, T2>, double> GetRanking { get; }
 
         Func<Dictionary<string,Test<T1,T2>>> GetDictonary { get; }
     }

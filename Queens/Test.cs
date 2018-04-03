@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Queens
 {
-    public class Test<T1,T2> where T1: class where T2 : class
+    public class Test<T1,T2> where T1: class //where T2 : class
     {
         private readonly object _obj;
         public List<TestResult<T2>> Results { get; private set; }
